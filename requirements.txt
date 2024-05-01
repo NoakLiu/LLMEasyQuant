@@ -1,0 +1,5 @@
+bitsandbytes>=0.39.0
+accelerate
+transformers
+lovely-tensors  # output formatting
+tqdm
