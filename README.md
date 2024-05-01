@@ -1,5 +1,5 @@
 # LLMEasyQuant
 
-LLMEasyQuant is a package developed for Easy Quantization Deployment for LLM applications
+LLMEasyQuant is a package developed for Easy Quantization Deployment for LLM applications.
 
-Author: Dong Liu, Chuyue Zhang
+Author: Dong Liu*, Chuyue Zhang* (* denotes equal contribution)
