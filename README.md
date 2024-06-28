@@ -6,7 +6,7 @@ Author: Dong Liu, Meng Jiang, Kaiser Pister
 
 ### Deployment Methods:
 #### Define the model
-```
+```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import BitsAndBytesConfig
 
@@ -31,63 +31,66 @@ model_int8 = AutoModelForCausalLM.from_pretrained(model_id,
                                                   )
 model_int8.name_or_path += "_int8"
 ```
+
 #### mode deployment
 absmax
-```
+```python
 absq = Quantizer(model, tokenizer, absmax_quantize)
 quantizers.append(absq)
 ```
+
 zeropoint
-```
+```python
 zpq = Quantizer(model, tokenizer, zeropoint_quantize)
 quantizers.append(zpq)
 ```
-smoothquant
-```
-smooth_quant = SmoothQuantMatrix(alpha=0.5)
 
+smoothquant
+```python
+smooth_quant = SmoothQuantMatrix(alpha=0.5)
 smoothq = Quantizer (model, tokenizer, smooth_quant.smooth_quant_apply)
 quantizers.append(smoothq)
 ```
+
 simquant
-```
+```python
 simq = Quantizer(model, tokenizer, sim_quantize )
 quantizers.append(simq)
 ```
 
 simquant, zeroquant and knowledge distllation of both each
-```
+```python
 symq = Quantizer(model, tokenizer, sym_quantize_8bit)
 zeroq = Quantizer(model, tokenizer, sym_quantize_8bit, zeroquant_func)
 quantizers.extend([symq, zeroq])
 ```
 
 #### model computation
-```
+```python
 [q.quantize() for q in quantizers]
 ```
 
 #### visualization
-```
+```python
 dist_plot([model, model_int8] + [q.quant for q in quantizers])
 ```
 
 #### model comparision
-```
+```python
 generated = compare_generation([model, model_int8] + [q.quant for q in quantizers], tokenizer, max_length=200, temperature=0.8)
 ```
 
 #### perplexity analysis
-```
+```python
 ppls = compare_ppl([model, model_int8] + [q.quant for q in quantizers], tokenizer, list(generated.values()))
 ```
 
 
-Results:
+### Results:
 ![](results/quant_weights_distribution.jpeg)
 ![](results/perfermance_comparision.jpeg)
 ![](results/ppl_analysis.jpeg)
 
-Conclusion:
+### Conclusion:
 In the research, we develop LLMEasyQuant, it is a package aiming to for easy quantization deployment which is user-friendly and suitable for beginners' learning.
 
