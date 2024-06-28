@@ -87,8 +87,9 @@ ppls = compare_ppl([model, model_int8] + [q.quant for q in quantizers], tokenize
 
 
 ### Results:
-![](results/quant_weights_distribution.jpeg)
+<!-- ![](results/quant_weights_distribution.jpeg) -->
 <!-- ![](results/perfermance_comparision.jpeg){width=500px} -->
+<img src="results/quant_weights_distribution.jpeg" alt="Quant Weights Distribution" width="700">
 <img src="results/perfermance_comparision.jpeg" alt="Performance Comparison" width="500">
 <!-- ![](results/ppl_analysis.jpeg) -->
 <img src="results/ppl_analysis.jpeg" alt="PPL Analysis" width="500">
