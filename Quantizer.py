@@ -11,10 +11,6 @@ import torch
 import transformers
 from tqdm.auto import tqdm
 
-
-# Functions modified from:
-# https://github.com/mlabonne/llm-course/tree/main?tab=readme-ov-file#quantization
-
 class Quantizer:
     def __init__(self,
                  model,

@@ -1,6 +1,6 @@
 # LLMEasyQuant
 
-LLMEasyQuant is a package developed for Easy Quantization Deployment for LLM applications.
+LLMEasyQuant is a package developed for Easy Quantization Deployment for LLM applications. Nowadays, packages like TensorRT and Quanto have many underlying structures and self-invoking internal functions, which are not conducive to developers' personalized development and learning for deployment. LLMEasyQuant is developed to tackle this problem.
 
 Author: Dong Liu, Meng Jiang, Kaiser Pister
 
