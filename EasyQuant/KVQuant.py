@@ -1,5 +1,6 @@
 # reference: https://github.com/SqueezeAILab/KVQuant/blob/main/quant/kvquant/simquant_module_quantizer.py#L364
 import numpy as np
+import torch
 def sim_quantize(X): # bits=8, per_channel=True, qchannel=0, include_sparse=False, sparsity_threshold=0.999, cap_outliers=False
     bits=8
     per_channel=True

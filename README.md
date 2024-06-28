@@ -88,8 +88,8 @@ ppls = compare_ppl([model, model_int8] + [q.quant for q in quantizers], tokenize
 
 ### Results:
 ![](results/quant_weights_distribution.jpeg)
-![](results/perfermance_comparision.jpeg)
-![](results/ppl_analysis.jpeg)
+![](results/perfermance_comparision.jpeg){ width=500px }
+![](results/ppl_analysis.jpeg){ width=300px }
 
 ### Conclusion:
 In the research, we develop LLMEasyQuant, it is a package aiming to for easy quantization deployment which is user-friendly and suitable for beginners' learning.
