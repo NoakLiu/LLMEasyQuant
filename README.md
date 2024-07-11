@@ -123,6 +123,27 @@ ppls = compare_ppl([model, model_int8] + [q.quant for q in quantizers], tokenize
 ### Conclusion:
 In the research, we develop LLMEasyQuant, it is a package aiming to for easy quantization deployment which is user-friendly and easy to be deployed when computational resouces is limited.
 
+### Deployment Simplicity Comparison Table
+
+| Feature/Package            | AWQ                                      | BiLLM                                    | QLora                                    | TensorRT                               | Quanto                                  | LLMEasyQuant                           |
+|----------------------------|------------------------------------------|------------------------------------------|------------------------------------------|----------------------------------------|-----------------------------------------|----------------------------------------|
+| **Hardware Requirements**  | GPU required                             | GPU required                             | GPU required                             | GPU required                           | GPU required                            | Supports CPU and GPU                   |
+| **Deployment Steps**       | Multiple complex steps                   | Detailed setup and tuning required       | Intricate steps and parameter adjustments | Complex setup with CUDA dependencies   | Complex setup with multiple dependencies | Streamlined, minimal setup, includes AWQ, BiLLM, QLora |
+| **Quantization Methods**   | Manual adjustments and configurations    | Detailed configurations needed           | Specific configurations for each method  | Limited to specific optimizations      | Limited to specific optimizations       | Variety of methods with simple interface, includes AWQ, BiLLM, QLora |
+| **Supported Methods**      | AWQ                                      | BiLLM                                    | QLora                                    | TensorRT-specific methods              | Quanto-specific methods                 | Absmax, Zeropoint, SmoothQuant, SimQuant, SymQuant, ZeroQuant, AWQ, BiLLM, QLora |
+| **Integration Process**    | Complex library installation and setup   | Extensive documentation and dependencies | Intricate library setup                  | Requires integration with NVIDIA stack | Requires integration with specific frameworks | Simple integration with `transformers` |
+| **Visualization Tools**    | Additional setup required                | Additional setup required                | Additional setup required                | External tools needed                  | External tools needed                   | Built-in visualization functions       |
+| **Performance Analysis**   | External tools needed                    | External tools needed                    | External tools needed                    | External tools needed                  | External tools needed                   | Built-in performance analysis functions |
+
+### Summary of LLMEasyQuant Advantages
+
+1. **Hardware Flexibility**: Supports both CPU and GPU, providing flexibility for developers with different hardware resources.
+2. **Simplified Deployment**: Requires minimal setup steps, making it user-friendly and accessible.
+3. **Comprehensive Quantization Methods**: Offers a wide range of quantization methods, including AWQ, BiLLM, and QLora, with easy-to-use interfaces.
+4. **Seamless Integration**: Integrates easily with popular libraries like `transformers`.
+5. **Built-in Visualization and Analysis**: Includes tools for visualizing and comparing model performance, simplifying the evaluation process.
+
+
 ### Citation
 If you find LLMEasyQuant useful or relevant to your project and research, please kindly cite our paper:
 
