@@ -140,8 +140,7 @@ In the research, we develop LLMEasyQuant, it is a package aiming to for easy qua
 1. **Hardware Flexibility**: Supports both CPU and GPU, providing flexibility for developers with different hardware resources.
 2. **Simplified Deployment**: Requires minimal setup steps, making it user-friendly and accessible.
 3. **Comprehensive Quantization Methods**: Offers a wide range of quantization methods, including AWQ, BiLLM, and QLora, with easy-to-use interfaces.
-4. **Seamless Integration**: Integrates easily with popular libraries like `transformers`.
-5. **Built-in Visualization and Analysis**: Includes tools for visualizing and comparing model performance, simplifying the evaluation process.
+4. **Built-in Visualization and Analysis**: Includes tools for visualizing and comparing model performance, simplifying the evaluation process.
 
 
 ### Citation
