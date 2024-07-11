@@ -65,6 +65,24 @@ zeroq = Quantizer(model, tokenizer, sym_quantize_8bit, zeroquant_func)
 quantizers.extend([symq, zeroq])
 ```
 
+AWQ
+```python
+awq = Quantizer(model, tokenizer, awq_quantize )
+quantizers.append(simq)
+```
+
+BiLLM
+```python
+billmq = Quantizer(model, tokenizer, billm_quantize )
+quantizers.append(simq)
+```
+
+QLora
+```python
+qloraq = Quantizer(model, tokenizer, qlora_quantize )
+quantizers.append(simq)
+```
+
 #### model computation
 ```python
 [q.quantize() for q in quantizers]
@@ -109,7 +127,7 @@ In the research, we develop LLMEasyQuant, it is a package aiming to for easy qua
 If you find LLMEasyQuant useful or relevant to your project and research, please kindly cite our paper:
 
 ```
-@article{liu2024llmeasyquanteasyuse,
+@misc{liu2024llmeasyquanteasyuse,
       title={LLMEasyQuant -- An Easy to Use Toolkit for LLM Quantization}, 
       author={Dong Liu and Meng Jiang and Kaiser Pister},
       year={2024},
