@@ -125,15 +125,15 @@ In the research, we develop LLMEasyQuant, it is a package aiming to for easy qua
 
 ### Deployment Simplicity Comparison Table
 
-| Feature/Package            | AWQ                                      | BiLLM                                    | QLora                                    | TensorRT                               | Quanto                                  | LLMEasyQuant                           |
-|----------------------------|------------------------------------------|------------------------------------------|------------------------------------------|----------------------------------------|-----------------------------------------|----------------------------------------|
-| **Hardware Requirements**  | GPU required                             | GPU required                             | GPU required                             | GPU required                           | GPU required                            | Supports CPU and GPU                   |
-| **Deployment Steps**       | Multiple complex steps                   | Detailed setup and tuning required       | Intricate steps and parameter adjustments | Complex setup with CUDA dependencies   | Complex setup with multiple dependencies | Streamlined, minimal setup, includes AWQ, BiLLM, QLora |
-| **Quantization Methods**   | Manual adjustments and configurations    | Detailed configurations needed           | Specific configurations for each method  | Limited to specific optimizations      | Limited to specific optimizations       | Variety of methods with simple interface, includes AWQ, BiLLM, QLora |
-| **Supported Methods**      | AWQ                                      | BiLLM                                    | QLora                                    | TensorRT-specific methods              | Quanto-specific methods                 | Absmax, Zeropoint, SmoothQuant, SimQuant, SymQuant, ZeroQuant, AWQ, BiLLM, QLora |
-| **Integration Process**    | Complex library installation and setup   | Extensive documentation and dependencies | Intricate library setup                  | Requires integration with NVIDIA stack | Requires integration with specific frameworks | Simple integration with `transformers` |
-| **Visualization Tools**    | Additional setup required                | Additional setup required                | Additional setup required                | External tools needed                  | External tools needed                   | Built-in visualization functions       |
-| **Performance Analysis**   | External tools needed                    | External tools needed                    | External tools needed                    | External tools needed                  | External tools needed                   | Built-in performance analysis functions |
+| Feature/Package            | TensorRT                               | Quanto                                  | LLMEasyQuant                           |
+|----------------------------|----------------------------------------|-----------------------------------------|----------------------------------------|
+| **Hardware Requirements**  | GPU                                   | GPU                                    | **CPU** and GPU                         |
+| **Deployment Steps**       | Complex setup with CUDA dependencies  | Complex setup with multiple dependencies | Streamlined, minimal setup, includes AWQ, BiLLM, QLora |
+| **Quantization Methods**   | Limited to specific optimizations      | Limited to specific optimizations       | Variety of methods with simple interface, includes AWQ, BiLLM, QLora |
+| **Supported Methods**      | TensorRT-specific methods             | Quanto-specific methods                 | Absmax, Zeropoint, SmoothQuant, SimQuant, SymQuant, ZeroQuant, AWQ, BiLLM, QLora |
+| **Integration Process**    | Requires integration with NVIDIA stack | Requires integration with specific frameworks | Simple integration with `transformers` |
+| **Visualization Tools**    | External tools needed                 | External tools needed                   | Built-in visualization functions       |
+| **Performance Analysis**   | External tools needed                 | External tools needed                   | Built-in performance analysis functions |
 
 ### Summary of LLMEasyQuant Advantages
 
