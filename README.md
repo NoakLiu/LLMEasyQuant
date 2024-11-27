@@ -2,7 +2,7 @@
 
 LLMEasyQuant is a package developed for Easy Quantization Deployment for LLM applications. Nowadays, packages like TensorRT and Quanto have many underlying structures and self-invoking internal functions, which are not conducive to developers' personalized development and learning for deployment. LLMEasyQuant is developed to tackle this problem.
 
-Author: Dong Liu, Meng Jiang, Kaiser Pister
+Author: Dong Liu, Kaiser Pister
 
 ### Deployment Methods:
 #### Define the model
@@ -131,7 +131,7 @@ In the research, we develop LLMEasyQuant, it is a package aiming to for easy qua
 | **Deployment Steps**       | Complex setup with CUDA dependencies  | Complex setup with multiple dependencies | Streamlined, minimal setup, includes AWQ, BiLLM, QLora |
 | **Quantization Methods**   | Limited to specific optimizations      | Limited to specific optimizations       | Variety of methods with simple interface, includes AWQ, BiLLM, QLora |
 | **Supported Methods**      | TensorRT-specific methods             | Quanto-specific methods                 | Absmax, Zeropoint, SmoothQuant, SimQuant, SymQuant, ZeroQuant, AWQ, BiLLM, QLora |
-| **Integration Process**    | Requires integration with NVIDIA stack | Requires integration with specific frameworks | Simple integration with `transformers` |
+| **Integration Process**    | Requires integration with NVIDIA stack | Requires integration with specific frameworks | Clear integration with `transformers` |
 | **Visualization Tools**    | External tools needed                 | External tools needed                   | Built-in visualization functions       |
 | **Performance Analysis**   | External tools needed                 | External tools needed                   | Built-in performance analysis functions |
 
