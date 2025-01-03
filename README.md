@@ -147,7 +147,7 @@ In the research, we develop LLMEasyQuant, it is a package aiming to for easy qua
 If you find LLMEasyQuant useful or relevant to your project and research, please kindly cite our paper:
 
 ```
-@misc{liu2024llmeasyquanteasyuse,
+@article{liu2024llmeasyquanteasyuse,
       title={LLMEasyQuant -- An Easy to Use Toolkit for LLM Quantization}, 
       author={Dong Liu and Meng Jiang and Kaiser Pister},
       year={2024},
