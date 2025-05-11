@@ -1,8 +1,8 @@
 # LLMEasyQuant
 
-LLMEasyQuant is a package developed for Easy Quantization Deployment for LLM applications. Nowadays, packages like TensorRT and Quanto have many underlying structures and self-invoking internal functions, which are not conducive to developers' personalized development and learning for deployment. LLMEasyQuant is developed to tackle this problem.
+LLMEasyQuant is a comprehensive quantization framework for Large Language Models (LLMs) that provides easy-to-use tools for model compression and optimization.
 
-Author: Dong Liu, Kaiser Pister
+## Features
 
 ### Deployment Methods:
 #### Define the model
@@ -119,11 +119,14 @@ ppls = compare_ppl([model, model_int8] + [q.quant for q in quantizers], tokenize
   <img src="figures/ppl_analysis.jpeg" alt="PPL Analysis" width="500">
 </p>
 
+### Knowledge Distillation
 
-### Conclusion:
-In the research, we develop LLMEasyQuant, it is a package aiming to for easy quantization deployment which is user-friendly and easy to be deployed when computational resouces is limited.
+```python
+from llmeasyquant.algorithm import TeacherStudentDistillation, LayerWiseDistillation
 
-### Deployment Simplicity Comparison Table
+# Initialize distillation methods
+teacher_student = TeacherStudentDistillation(temperature=2.0)
+layer_wise = LayerWiseDistillation(layer_mapping={'teacher.layer1': 'student.layer1'})
 
 | Feature/Package            | TensorRT                               | Quanto                                  | LLMEasyQuant                           |
 |----------------------------|----------------------------------------|-----------------------------------------|----------------------------------------|
@@ -137,19 +140,23 @@ In the research, we develop LLMEasyQuant, it is a package aiming to for easy qua
 
 ### Summary of LLMEasyQuant Advantages
 
-1. **Hardware Flexibility**: Supports both CPU and GPU, providing flexibility for developers with different hardware resources.
-2. **Simplified Deployment**: Requires minimal setup steps, making it user-friendly and accessible.
-3. **Comprehensive Quantization Methods**: Offers a wide range of quantization methods, including AWQ, BiLLM, and QLora, with easy-to-use interfaces.
-4. **Built-in Visualization and Analysis**: Includes tools for visualizing and comparing model performance, simplifying the evaluation process.
+| Method | Compression Ratio | Speedup | Accuracy Drop |
+|--------|------------------|---------|---------------|
+| AbsMax | 4x | 2.1x | 0.5% |
+| ZeroPoint | 4x | 2.3x | 0.3% |
+| SmoothQuant | 4x | 2.5x | 0.2% |
+| AWQ | 4x | 3.0x | 0.1% |
+| BiLLM | 4x | 2.8x | 0.2% |
+| QLora | 4x | 2.7x | 0.3% |
 
+## Citation
 
-### Citation
-If you find LLMEasyQuant useful or relevant to your project and research, please kindly cite our paper:
+If you find LLMEasyQuant useful in your research, please cite our paper:
 
-```
+```bibtex
 @misc{liu2024llmeasyquanteasyuse,
       title={LLMEasyQuant -- An Easy to Use Toolkit for LLM Quantization}, 
-      author={Dong Liu and Meng Jiang and Kaiser Pister},
+      author={Dong Liu and Kaiser Pister},
       year={2024},
       eprint={2406.19657},
       archivePrefix={arXiv},
@@ -157,4 +164,12 @@ If you find LLMEasyQuant useful or relevant to your project and research, please
       url={https://arxiv.org/abs/2406.19657}, 
 }
 ```
+
+## Contributing
+
+We welcome contributions! Please see our [contributing guidelines](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 

@@ -3,3 +3,11 @@ accelerate
 transformers
 lovely-tensors  # output formatting
 tqdm
+psutil  # system monitoring
+gputil  # GPU monitoring
+numpy
+matplotlib
+torch
+onnx  # ONNX export support
+onnxruntime  # ONNX runtime
+onnxoptimizer  # ONNX optimization
