@@ -153,8 +153,8 @@ layer_wise = LayerWiseDistillation(layer_mapping={'teacher.layer1': 'student.lay
 
 If you find LLMEasyQuant useful in your research, please cite our paper:
 
-```bibtex
-@misc{liu2024llmeasyquanteasyuse,
+```
+@article{liu2024llmeasyquanteasyuse,
       title={LLMEasyQuant -- An Easy to Use Toolkit for LLM Quantization}, 
       author={Dong Liu and Kaiser Pister},
       year={2024},
