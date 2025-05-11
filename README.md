@@ -127,10 +127,11 @@ from llmeasyquant.algorithm import TeacherStudentDistillation, LayerWiseDistilla
 # Initialize distillation methods
 teacher_student = TeacherStudentDistillation(temperature=2.0)
 layer_wise = LayerWiseDistillation(layer_mapping={'teacher.layer1': 'student.layer1'})
+```
 
 | Feature/Package            | TensorRT                               | Quanto                                  | LLMEasyQuant                           |
 |----------------------------|----------------------------------------|-----------------------------------------|----------------------------------------|
-| **Hardware Requirements**  | GPU                                   | GPU                                    | **CPU** and GPU                         |
+| **Hardware Requirements**  | GPU                                   | GPU                                    | CPU and GPU                         |
 | **Deployment Steps**       | Complex setup with CUDA dependencies  | Complex setup with multiple dependencies | Streamlined, minimal setup, includes AWQ, BiLLM, QLora |
 | **Quantization Methods**   | Limited to specific optimizations      | Limited to specific optimizations       | Variety of methods with simple interface, includes AWQ, BiLLM, QLora |
 | **Supported Methods**      | TensorRT-specific methods             | Quanto-specific methods                 | Absmax, Zeropoint, SmoothQuant, SimQuant, SymQuant, ZeroQuant, AWQ, BiLLM, QLora |
